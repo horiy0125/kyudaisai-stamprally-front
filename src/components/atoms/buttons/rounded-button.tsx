@@ -9,7 +9,7 @@ type Props = {
   className?: string;
   disabled?: boolean;
 };
-const RoundedColorButton: React.VFC<Props> = ({
+const RoundedButton: React.VFC<Props> = ({
   icon,
   children,
   onClick,
@@ -32,4 +32,4 @@ const RoundedColorButton: React.VFC<Props> = ({
   );
 };
 
-export default RoundedColorButton;
+export default RoundedButton;
