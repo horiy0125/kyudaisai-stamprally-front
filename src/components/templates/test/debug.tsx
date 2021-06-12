@@ -9,6 +9,8 @@ import {
   setLocalStorageValue,
 } from '../../../utils/window';
 import { localStorageKeys } from '../../../constants/local-storage-keys';
+import FullWidthRoundedLink from '../../atoms/links/full-width-rounded-link';
+import { pagePaths } from '../../../config/page-paths';
 
 const TestDebugPageTemplate: React.VFC = () => {
   const [achievedTestStamps, setAchievedTestStamps] = useRecoilState(
@@ -68,6 +70,11 @@ const TestDebugPageTemplate: React.VFC = () => {
         >
           リセット
         </RoundedButton>
+      </section>
+      <section>
+        <FullWidthRoundedLink href={pagePaths.test.index}>
+          テストTOPへ戻る
+        </FullWidthRoundedLink>
       </section>
     </div>
   );
