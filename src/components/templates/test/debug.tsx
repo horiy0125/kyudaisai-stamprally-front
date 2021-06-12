@@ -17,10 +17,6 @@ const TestDebugPageTemplate: React.VFC = () => {
     achievedTestStampsState,
   );
 
-  useEffect(() => {
-    console.log(achievedTestStamps);
-  }, [achievedTestStamps]);
-
   const achieveStamp = (key: number) => {
     const updatedAchievedTestStamps = { ...achievedTestStamps };
     updatedAchievedTestStamps[key] = testStamps[key];
