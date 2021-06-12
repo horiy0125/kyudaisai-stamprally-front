@@ -1,22 +1,9 @@
-import React, { useEffect } from 'react';
-import { useSetRecoilState } from 'recoil';
+import React from 'react';
 import TestDebugPageTemplate from '../../components/templates/test/debug';
-import { localStorageKeys } from '../../constants/local-storage-keys';
-import { achievedTestStampsState } from '../../recoil/atoms/test';
-import { getLocalStorageValue } from '../../utils/window';
+import { fetchAchievedTestStamps } from '../../hooks/test';
 
 const TestDebugPage: React.VFC = () => {
-  const setAchievedTestStamps = useSetRecoilState(achievedTestStampsState);
-
-  useEffect(() => {
-    const achievedTestStampsData = getLocalStorageValue(
-      localStorageKeys.achievedTestStamps,
-    );
-    if (achievedTestStampsData) {
-      const achievedTestStamps = JSON.parse(achievedTestStampsData);
-      setAchievedTestStamps(achievedTestStamps);
-    }
-  }, []);
+  fetchAchievedTestStamps();
 
   return <TestDebugPageTemplate />;
 };

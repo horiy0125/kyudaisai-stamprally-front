@@ -1,4 +1,18 @@
+@import "../../../foundation/mixins";
+@import "../../../foundation/variables";
+
 .root {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
   width: 100vw;
+}
+
+.stamp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: calc(100vh / 3);
+  border: 1px solid $color-border-black;
 }

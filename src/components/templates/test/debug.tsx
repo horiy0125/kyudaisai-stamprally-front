@@ -62,7 +62,10 @@ const TestDebugPageTemplate: React.VFC = () => {
       <section>
         <h2>スタンプの取得状況をリセットする</h2>
 
-        <RoundedColorButton onClick={() => resetAchievements()}>
+        <RoundedColorButton
+          className={styles.button}
+          onClick={() => resetAchievements()}
+        >
           リセット
         </RoundedColorButton>
       </section>
