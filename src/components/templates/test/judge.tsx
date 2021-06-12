@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import router from 'next/router';
+import { useRouter } from 'next/router';
 import { useRecoilState } from 'recoil';
 import styles from '../../../styles/components/templates/test/judge.module.scss';
 import { achievedTestStampsState } from '../../../recoil/atoms/test';
@@ -12,6 +12,7 @@ import { setLocalStorageValue } from '../../../utils/window';
 import { localStorageKeys } from '../../../constants/local-storage-keys';
 
 const TestJudgePageTemplate: React.VFC = () => {
+  const router = useRouter();
   const { query } = router;
 
   const [isAchieved, setIsAchieved] = useState(false);
