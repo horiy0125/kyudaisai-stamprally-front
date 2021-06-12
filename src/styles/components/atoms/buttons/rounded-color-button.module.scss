@@ -8,4 +8,15 @@
   padding: 8px 16px;
   color: $color-white;
   background: $color-default-blue;
+  border-radius: 28px;
+  @include hover {
+    background: $color-dark-blue;
+  }
+}
+
+.disabled {
+  background: $color-disabled;
+  @include hover {
+    background: $color-disabled;
+  }
 }

@@ -1,20 +1,33 @@
 import React from 'react';
 import styles from '../../../styles/components/atoms/buttons/rounded-color-button.module.scss';
+import { combineClasses } from '../../../utils/combine-classes';
 
 type Props = {
   icon?: React.ReactNode;
-  label: React.ReactNode;
+  children: React.ReactNode;
   onClick: () => void;
+  className?: string;
+  disabled?: boolean;
 };
 const RoundedColorButton: React.VFC<Props> = ({
   icon,
-  label,
+  children,
   onClick,
+  className,
+  disabled,
 }: Props) => {
   return (
-    <button className={styles.root} onClick={() => onClick()}>
+    <button
+      className={combineClasses(
+        styles.root,
+        className,
+        disabled ? styles.disabled : null,
+      )}
+      onClick={() => onClick()}
+      disabled={disabled}
+    >
       {icon ? <div>{icon}</div> : null}
-      <span>{label}</span>
+      <span>{children}</span>
     </button>
   );
 };

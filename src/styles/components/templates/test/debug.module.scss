@@ -1,4 +1,25 @@
 .root {
   display: inline-block;
   width: 100vw;
+
+  h1 {
+    padding: 16px 0;
+  }
+
+  h2 {
+    padding: 12px 0;
+  }
+
+  section {
+    padding: 16px 0;
+  }
+}
+
+.buttonsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.button {
+  margin: 8px;
 }
