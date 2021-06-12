@@ -11,6 +11,11 @@ const TestPageTemplate: React.VFC = () => {
 
   return (
     <div className={styles.root}>
+      <h1>
+        kyudaisai-stamprally-front
+        <br />
+        Test Page
+      </h1>
       {Object.keys(testStamps).map((key, index) => (
         <div className={styles.stamp} key={index}>
           <strong>テストスタンプ{key}</strong>
