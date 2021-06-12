@@ -1,0 +1,120 @@
+import React from 'react';
+import styles from '../../../styles/components/templates/test/routes.module.scss';
+import NextImage from '../../atoms/next-image';
+
+const TestRoutesPageTemplate: React.VFC = () => {
+  return (
+    <div className={styles.root}>
+      <table>
+        <tr>
+          <td>/</td>
+          <td>/test</td>
+          <td>/test/debug</td>
+        </tr>
+        <tr>
+          <td>
+            <NextImage
+              src="/images/qrcodes/routes/index.png"
+              width={400}
+              height={400}
+            />
+          </td>
+          <td>
+            <NextImage
+              src="/images/qrcodes/routes/test.png"
+              width={400}
+              height={400}
+            />
+          </td>
+          <td>
+            <NextImage
+              src="/images/qrcodes/routes/debug.png"
+              width={400}
+              height={400}
+            />
+          </td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>test-stamp1</td>
+          <td>test-stamp2</td>
+          <td>test-stamp3</td>
+          <td>test-stamp4</td>
+          <td>test-stamp5</td>
+          <td>test-stamp6</td>
+        </tr>
+        <tr>
+          <td>
+            <NextImage
+              src="/images/qrcodes/stamps/valid/test1.jpg"
+              width={400}
+              height={400}
+            />
+          </td>
+          <td>
+            <NextImage
+              src="/images/qrcodes/stamps/valid/test2.jpg"
+              width={400}
+              height={400}
+            />
+          </td>
+          <td>
+            <NextImage
+              src="/images/qrcodes/stamps/valid/test3.jpg"
+              width={400}
+              height={400}
+            />
+          </td>
+          <td>
+            <NextImage
+              src="/images/qrcodes/stamps/valid/test4.jpg"
+              width={400}
+              height={400}
+            />
+          </td>
+          <td>
+            <NextImage
+              src="/images/qrcodes/stamps/valid/test5.jpg"
+              width={400}
+              height={400}
+            />
+          </td>
+          <td>
+            <NextImage
+              src="/images/qrcodes/stamps/valid/test6.jpg"
+              width={400}
+              height={400}
+            />
+          </td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>test（無効なスタンプ）</td>
+          <td>test0（無効なスタンプ）</td>
+        </tr>
+        <tr>
+          <td>
+            <NextImage
+              src="/images/qrcodes/stamps/invalid/14214816589919.jpg"
+              width={400}
+              height={400}
+            />
+          </td>
+          <td>
+            <NextImage
+              src="/images/qrcodes/stamps/invalid/14214816811922.jpg"
+              width={400}
+              height={400}
+            />
+          </td>
+        </tr>
+      </table>
+    </div>
+  );
+};
+
+export default TestRoutesPageTemplate;
