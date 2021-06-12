@@ -1,0 +1,11 @@
+@import "../../../foundation/mixins";
+@import "../../../foundation/variables";
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  color: $color-white;
+  background: $color-default-blue;
+}

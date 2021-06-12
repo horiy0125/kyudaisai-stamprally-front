@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+// color
+
+$color-white: #fff;
+$color-default-black: #121212;
+$color-border-black: rgba(0, 0, 0, 0.5);
+$color-border-gray: #f1f1f1;
+$color-disabled: #12121236;
+$color-default-blue: #1e65df;
+$color-dark-blue: #1757c4;
+$color-default-green: #159e7c;
+
+$color-twitter: #1d9bf0;
+
+// font-family
+
+$jp-font: "Noto Sans JP", sans-serif;
+$en-font: "Poppins", sans-serif;
+
+// breakpoint
+
+$pc-breakpoint: 1024px;
+$sp-breakpoint: 420px;
