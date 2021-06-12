@@ -1,0 +1,12 @@
+@import "../../../foundation/mixins";
+@import "../../../foundation/variables";
+
+.root {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: $color-white;
+  background: $color-default-blue;
+  border-radius: 28px;
+  padding: 12px 0;
+}

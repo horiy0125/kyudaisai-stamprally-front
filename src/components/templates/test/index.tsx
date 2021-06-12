@@ -1,8 +1,10 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil';
+import { pagePaths } from '../../../config/page-paths';
 import { testStamps } from '../../../constants/test-stamps';
 import { achievedTestStampsState } from '../../../recoil/atoms/test';
 import styles from '../../../styles/components/templates/test/index.module.scss';
+import FullWidthRoundedLink from '../../atoms/links/full-width-rounded-link';
 
 const TestPageTemplate: React.VFC = () => {
   const achievedTestStamps = useRecoilValue(achievedTestStampsState);
@@ -17,6 +19,9 @@ const TestPageTemplate: React.VFC = () => {
           </span>
         </div>
       ))}
+      <FullWidthRoundedLink href={pagePaths.test.debug} className={styles.link}>
+        デバッグページへ
+      </FullWidthRoundedLink>
     </div>
   );
 };

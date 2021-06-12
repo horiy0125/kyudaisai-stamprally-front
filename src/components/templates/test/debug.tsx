@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useRecoilState } from 'recoil';
-import RoundedColorButton from '../../atoms/buttons/rounded-color-button';
+import RoundedButton from '../../atoms/buttons/rounded-button';
 import styles from '../../../styles/components/templates/test/debug.module.scss';
 import { testStamps } from '../../../constants/test-stamps';
 import { achievedTestStampsState } from '../../../recoil/atoms/test';
@@ -47,14 +47,14 @@ const TestDebugPageTemplate: React.VFC = () => {
         <h2>スタンプを取得済みにする</h2>
         <div className={styles.buttonsWrapper}>
           {Object.keys(testStamps).map((key, index) => (
-            <RoundedColorButton
+            <RoundedButton
               className={styles.button}
               onClick={() => achieveStamp(Number(key))}
               key={index}
               disabled={achievedTestStamps[key] !== null}
             >
               テストスタンプ{key}
-            </RoundedColorButton>
+            </RoundedButton>
           ))}
         </div>
       </section>
@@ -62,12 +62,12 @@ const TestDebugPageTemplate: React.VFC = () => {
       <section>
         <h2>スタンプの取得状況をリセットする</h2>
 
-        <RoundedColorButton
+        <RoundedButton
           className={styles.button}
           onClick={() => resetAchievements()}
         >
           リセット
-        </RoundedColorButton>
+        </RoundedButton>
       </section>
     </div>
   );
