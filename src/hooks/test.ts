@@ -15,5 +15,13 @@ export const fetchAchievedTestStamps = () => {
       const achievedTestStamps = JSON.parse(achievedTestStampsData);
       setAchievedTestStamps(achievedTestStamps);
     }
+
+    console.log('called fetchAchievedTestStamps', achievedTestStampsData);
+  }, []);
+};
+
+export const validateUseEffect = () => {
+  useEffect(() => {
+    console.log('called validateUseEffect', typeof window);
   }, []);
 };

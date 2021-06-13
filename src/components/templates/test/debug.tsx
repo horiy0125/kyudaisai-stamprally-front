@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useRecoilState } from 'recoil';
 import RoundedButton from '../../atoms/buttons/rounded-button';
 import styles from '../../../styles/components/templates/test/debug.module.scss';
